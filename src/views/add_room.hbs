@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOTEL MAFIA-Add Student</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+
+<body style="background-color: antiquewhite;">
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="head-top">
+            <div class="site-name">
+                <a class="extra" href=index.html><span>TCET HOSTEL</span></a>
+            </div>
+            <div class="site-nav">
+                <span id="nav-btn">MENU <i class="fas fa-bars"></i></span>
+            </div>
+        </div>
+
+        <div class="head-bottom flex">
+            <h2>Add the Hostel Information</h2>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- side navbar -->
+    <div class="sidenav" id="sidenav">
+        <span class="cancel-btn" id="cancel-btn">
+            <i class="fas fa-times"></i>
+        </span>
+
+        <ul class="navbar">
+            <li><a href="/HMS/home">home</a></li>
+            <li><a href="/HMS/room/createRoom">add room</a></li>
+            <li><a href="/HMS/student">add student</a></li>
+            <li><a href="/HMS/studentList">Student-room </a></li>
+            <li><a href="/HMS/room/emptyRoom">Empty room</a></li>
+        </ul>
+        <button class="btn sign-up">sign up</button>
+        <button class="btn log-in">log in</button>
+    </div>
+    <!-- end of side navbar -->
+
+    <!-- fullscreen modal -->
+    <div id="modal"></div>
+    <!-- end of fullscreen modal -->
+
+
+    <!-- body(form) of the page start here  -->
+    <div class="global-container">
+        <div class="card login-form">
+            <div class="card-body">
+                <h1 class="card-title text-center">Add Room Information</h1>
+                <div class="card-text">
+                    <form action="/HMS/room/createRoom" method="POST">
+                        <div class="form-group">
+                            <lable class="exampleFormControlInput1">Enter room Number </lable>
+                            <input type="text" class="form-control form-control-sm" name="roomNumber" id="exapleInputroomnum">
+                        </div>
+                        <div class="form-group">
+                            <lable class="exampleFormControlInput1">Number of Bed </lable>
+                            <input type="number" class="form-control form-control-sm" name="numberOfBeds" id="exapleInputroomnum">
+                        </div>
+                        <lable id="exapleInputroomnum" class="exampleFormControlInput1">AC Available</lable>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="isAC" id="flexRadioDefault1"
+                                id="exapleInputroomnum" value="true">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="isAC" id="flexRadioDefault2"
+                                id="exapleInputroomnum" value="false" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                No
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <lable class="exampleFormControlInput1">Cost Per Bed</lable>
+                            <input type="number" class="form-control form-control-sm" name="costPerBed" id="exapleInputroomnum">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block"> Add Rooom </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- body(form) of the page end here  -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

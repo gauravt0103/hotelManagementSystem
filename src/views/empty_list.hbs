@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOTEL MAFIA - Empty list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/main.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="head-top">
+            <div class="site-name">
+                <a class="extra" href=index.html><span>TCET HOSTEL</span></a>
+            </div>
+            <div class="site-nav">
+                <span id="nav-btn">MENU <i class="fas fa-bars"></i></span>
+            </div>
+        </div>
+
+        <div class="head-bottom flex">
+            <h2>Empty Rooms </h2>
+
+
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- side navbar -->
+    <div class="sidenav" id="sidenav">
+        <span class="cancel-btn" id="cancel-btn">
+            <i class="fas fa-times"></i>
+        </span>
+
+        <ul class="navbar">
+            <li><a href="/HMS/home">home</a></li>
+            <li><a href="/HMS/room/createRoom">add room</a></li>
+            <li><a href="/HMS/student">add student</a></li>
+            <li><a href="/HMS/studentList">Student-room </a></li>
+            <li><a href="/HMS/room/emptyRoom">Empty room</a></li>
+        </ul>
+        <button class="btn sign-up">sign up</button>
+        <button class="btn log-in">log in</button>
+    </div>
+    <!-- end of side navbar -->
+
+    <!-- fullscreen modal -->
+    <div id="modal"></div>
+    <!-- end of fullscreen modal -->
+
+    <!-- start of main body  -->
+    <table class="table">
+        <thead>
+            <th>Sr. No.</th>
+            <th>Room Number</th>
+            <th>Total Bed</th>
+            <th>Occupied</th>
+            <th>AC</th>
+            <th>cost Per Bed</th>
+        </thead>
+        <tbody>
+            {{#each room as |value key|}}
+            <tr>
+                <td>{{key}}</td>
+                <td>{{value.roomNumber}}</td>
+                <td>{{value.numberOfBeds}}</td>
+                <td>
+                    <p class="status-empty">{{value.occupiedBeds}}</p>
+                </td>
+                <td>
+                    <p class="status-full">{{value.isAC}}</p>
+                </td>
+                <td>
+                    <p class="status-full">{{value.costPerBed}}</p>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div>
+        <br><br><br><br><br>
+    </div>
+
+    <!-- end of main body  -->
+    <script src="/script.js"></script>
+</body>
+
+</html>
